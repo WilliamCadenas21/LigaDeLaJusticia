@@ -21,4 +21,11 @@ public class Vehiculo {
         this.personaje = personaje;
     }
 
+    public void addEncuentro(Encuentro Encuentro) {
+        encuentros.add(Encuentro);
+    }
+
+    public ArrayList<Encuentro> getEncuentros() {
+        return encuentros;
+    }
 }

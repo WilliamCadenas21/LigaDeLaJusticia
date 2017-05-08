@@ -10,18 +10,22 @@ public class Encuentro {
     private ArrayList<SuperHeroe> heroes;
     private final String nombre,lugar,fecha;
     
-    //"Batalla1","Metropolis","Enero 1",listaS, listaV)
     public Encuentro(String nombre,String lugar,String fecha,ArrayList<SuperHeroe> heroes,ArrayList<Villano> villanos) {
         this.villanos = villanos;
         this.heroes = heroes;
         this.nombre = nombre;
         this.lugar = lugar;
         this.fecha = fecha;
+        vehiculosHeroes = new ArrayList<>();
+        vehiculosVillanos = new ArrayList<>();
     }
 
-    public void addVehiculoSuper(Vehiculo vTemporal) {
-        
+    public void addVehiculoSuper(Vehiculo vehiculo) {
+        vehiculosHeroes.add(vehiculo);
     }
     
+    public void addVehiculoVillano(Vehiculo vehiculo) {
+        vehiculosVillanos.add(vehiculo);
+    }
     
 }

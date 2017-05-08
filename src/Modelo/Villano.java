@@ -25,4 +25,16 @@ public class Villano extends Personaje {
         }
         return null;
     }
+
+    public void getVehiculoMasUsado() {
+        int NunmeroDeEncuntros = vehiculos.get(0).getEncuentros().size();
+        String nombreVehiculo = vehiculos.get(0).getNombre();
+        for (int i = 0; i < vehiculos.size(); i++) {
+            if (vehiculos.get(i).getEncuentros().size() > NunmeroDeEncuntros) {
+                NunmeroDeEncuntros = vehiculos.get(i).getEncuentros().size();
+                nombreVehiculo = vehiculos.get(i).getNombre();
+            }
+        }
+        System.out.println(nombreVehiculo);
+    }
 }
